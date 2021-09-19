@@ -9,4 +9,5 @@ urlpatterns = [
     path('registration/', registration, name='registration'),
     path('profile/', profile, name='profile'),
     path('logout/', logout, name='logout'),
+    re_path(r'^verify/(?P<email>.+)/(?P<activation_key>\w+)/$', authapp.verify, name='verify'),
 ]
